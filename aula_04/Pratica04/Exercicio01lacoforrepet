@@ -1,0 +1,22 @@
+const leia= require("readline-sync");
+
+// questioInt - utilizado para ler numeros inteiros.
+let n1= leia.questionInt("Digite o primeiro numero do intervalo: ");
+let n2= leia.questionInt("Digite o primeiro numero do intervalo: ");
+
+if (n1 < n2) {
+    console.log(`No Intervalo entre ${n1} e ${n2}:`);
+
+    // O FOR começa no n1 e vai até o n2
+    for (let i = n1; i <= n2; i++) {
+        
+        // A "lupa seria o if" para múltiplos de 3 E 5
+        if (i % 3 === 0 && i % 5 === 0) {
+            console.log(`${i} é múltiplo de 3 e 5`);
+        }
+    }
+
+} else {
+    // Se n1 não for menor que n2, o que o programa diz?
+    console.log("Intervalo inválido!");
+}
